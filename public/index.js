@@ -22,7 +22,7 @@ function populateVoiceList() {
     voiceSelect.appendChild(option);
 }
 }
-setTimeout(populateVoiceList,1000);
+setTimeout(populateVoiceList,500);
 window.speechSynthesis.onvoiceschanged = function(e) {
     populateVoiceList();
 };
@@ -40,8 +40,8 @@ yourChatInput.addEventListener("keyup", function(event) {
 
 function ISay()  {
     if (yourChatInput.value) {
-    socket.emit("newchat",{message:yourChatInput.value,voice:voiceSelect.selectedIndex});
-    yourChatInput.value = '';
+        socket.emit("newchat",{message:yourChatInput.value,voice:voiceSelect.selectedIndex});
+        yourChatInput.value = '';
     }
 }
 
