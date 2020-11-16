@@ -9,7 +9,7 @@ let MessageDiv = document.getElementById("message");
 //console.log("hello")
 var voices = [];
  // Fetch the list of voices and populate the voice options.
- function populateVoiceList() {
+function populateVoiceList() {
  voices = speechSynthesis.getVoices();
  for (i = 0; i < voices.length; i++) {
      var option = document.createElement('option');
@@ -22,7 +22,7 @@ var voices = [];
     voiceSelect.appendChild(option);
 }
 }
-
+setTimeout(populateVoiceList,1000);
 window.speechSynthesis.onvoiceschanged = function(e) {
     populateVoiceList();
 };
