@@ -1,0 +1,40 @@
+{
+  "name": "funnytalkchat",
+  "version": "1.0.0",
+  "description": "Basic Chat. But your text is SPOKEN on everyone else's devices.",
+  "main": "funnytalk.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "start": "node funnytalk.js",
+    "dev": "nodemon funnytalk.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thedamian/FunnyTalkChat.git"
+  },
+  "keywords": [
+    "chat",
+    "tts",
+    "text",
+    "to",
+    "talk",
+    "funny"
+  ],
+  "author": "Damian Montero",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thedamian/FunnyTalkChat/issues"
+  },
+  "homepage": "https://github.com/thedamian/FunnyTalkChat#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "helmet": "^4.2.0",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.1",
+    "path": "^0.12.7",
+    "socket.io": "^3.0.1"
+  }
+}

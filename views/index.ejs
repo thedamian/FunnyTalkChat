@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funny Chat Talk</title>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css'>
+    <script src="socket.io.js"></script>
+</head>
+<body>
+    <fieldset>
+        <legend>Funny Talk Chat</legend>
+        <p>
+            <label for="size_1">Your Voice</label>
+            <select id="voice">Loading...</select>
+        </p>
+        <p>
+            <input type="text" id="yourChat" placeholder="Type here what you want to say">
+            <button id="talkBtn">Talk</button>
+        </p>
+        <p>
+            <div id="message"></div>
+        </p>
+    </fieldset>
+    <audio id="Talking"></audio>
+<script src="index.js"></script>
+</body>
+</html>
