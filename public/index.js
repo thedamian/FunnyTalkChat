@@ -29,22 +29,21 @@ window.speechSynthesis.onvoiceschanged = function(e) {
 
 
 
-talkBtn.addEventListener("click",function () {
-    if (yourChatInput.value) {
-        socket.emit("newchat",{message:yourChatInput.value,voice:voiceSelect.selectedIndex})
-    }
-});
+talkBtn.addEventListener("click",ISay());
+
 yourChatInput.addEventListener("keyup", function(event) {
-    // Number 13 is the "Enter" key on the keyboard
     if (event.keyCode === 13) {
-      // Cancel the default action, if needed
       event.preventDefault();
-      if (yourChatInput.value) {
-            socket.emit("newchat",{message:yourChatInput.value,voice:voiceSelect.selectedIndex})
-        }
+      ISay();        
     }
   });
 
+function ISay()  {
+    if (yourChatInput.value) {
+    socket.emit("newchat",{message:yourChatInput.value,voice:voiceSelect.selectedIndex});
+    yourChatInput.value = '';
+    }
+}
 
 
 socket.on("newchat", (chatInfo) => {
